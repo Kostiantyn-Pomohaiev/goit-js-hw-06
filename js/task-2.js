@@ -1,21 +1,21 @@
 class Storage {
+    #items;
     constructor(items) {
-        this.items = items;    
+        this.#items = items;    
     }
     getItems() {
-        return this.items;
+        return this.#items;
     }
 
     addItem(newItem) {
-        this.items.push(newItem);
+        this.#items.push(newItem);
     }
 
     removeItem(itemToRemove) {
-        if (this.items.includes(itemToRemove)) {
-        const start = this.items.indexOf(itemToRemove);
+        if (this.#items.includes(itemToRemove)) {
+        const start = this.#items.indexOf(itemToRemove);
         const deleteCount = 1;
-        const removedItems = this.items.splice(start, deleteCount);
-        return this.items;
+        const removedItems = this.#items.splice(start, deleteCount);
         }
     }
 }

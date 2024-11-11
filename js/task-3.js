@@ -1,22 +1,23 @@
 class StringBuilder {
+    #initialValue;
     constructor(initialValue) {
-        this.initialValue = initialValue;
+        this.#initialValue = initialValue;
     }
 
     getValue() {
-        return this.initialValue;
+        return this.#initialValue;
     }
 
     padStart(str) {
-        return this.initialValue = str + this.initialValue;
+        this.#initialValue = str + this.#initialValue;
     }
 
     padEnd(str) {
-        return this.initialValue = this.initialValue + str;
+        this.#initialValue = this.#initialValue + str;
     }   
     
     padBoth(str) {
-        return this.initialValue = str + this.initialValue + str;
+        this.#initialValue = str + this.#initialValue + str;
     }
 }
 
